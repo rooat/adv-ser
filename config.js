@@ -5,9 +5,9 @@ const Sequelize = require('sequelize');
 //var sequelize = new Sequelize('mysql://root:HWLhwl@#896@localhost:3306/sql_5g_hjth');
 
 const config = {
-    database: 'adv_db',
-    username: 'root',
-    password: 'HWLhwl!!896',
+    database: 'dapdap',
+    username: 'lucky917',
+    password: 'gamegame917',
     host: '127.0.0.1',
     port: 3306
 };
