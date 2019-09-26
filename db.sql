@@ -31,6 +31,7 @@ CREATE TABLE `ad_board_history` (
   `deposit` varchar(100) NOT NULL,
   `last_tax_pay_timestamp` varchar(100) NOT NULL,
   `content` text(50) NOT NULL,
+  `taxRate` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;

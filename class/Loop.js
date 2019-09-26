@@ -5,8 +5,10 @@ class LoopClass {
       this.count = 0;
     }
     async start(){
+      
       let that = this;
         setInterval(async function(){
+          
           try{
                 let adv = await config.adBoardHistory.findOne({where:{"ad_id":that.count}})
                 if(!adv){
@@ -20,6 +22,7 @@ class LoopClass {
                     let content = data.content;
                     let taxRate = data.taxRate;
                     let lastTaxPayTimestamp = data.lastTaxPayTimestamp;
+                    
                   await config.adBoardHistory.create({
                     ad_id: that.count,
                     parent_id: parentId,
@@ -27,7 +30,8 @@ class LoopClass {
                     price: price,
                     deposit: deposit,
                     last_tax_pay_timestamp: lastTaxPayTimestamp,
-                    content: content
+                    content: content,
+                    taxRate:taxRate
                   })
                 }
                 that.count++;

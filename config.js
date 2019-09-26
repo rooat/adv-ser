@@ -11,7 +11,13 @@ const config = {
     host: '127.0.0.1',
     port: 3306
 };
-
+// const config = {
+//     database: 'adv_db',
+//     username: 'root',
+//     password: 'HWLhwl!!896',
+//     host: '127.0.0.1',
+//     port: 3306
+// };
 var sequelize = new Sequelize(config.database, config.username, config.password, {
     host: config.host,
     dialect: 'mysql',
@@ -61,6 +67,7 @@ sequelize
         deposit:Sequelize.STRING(100),
         last_tax_pay_timestamp:Sequelize.STRING(100),
         content:Sequelize.TEXT(50),
+        taxRate:Sequelize.STRING(10),
     },{
         freezeTableName:true,
         timestamps: false
